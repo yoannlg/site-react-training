@@ -1,35 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react"
 
-function App() {
-  const [count, setCount] = useState(0)
+function App(){
+    //state
+    const [name, setName] = useState("") 
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React + Shinji</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+
+    //comportement
+    const handleSubmit = (e)=>{
+        e.preventDefault();
+        setName('')
+
+
+    }
+
+    const handleChange = (e) =>{
+        setName(e.target.value);
+    }
+    const handleClick = ()=>{
+        alert(`Bonjour ${name}`)
+    }
+
+    //render
+    return (
+        <>
+            <div>
+                <h1>Bienvenue chez nous !</h1>
+                <p>Connectez-vous</p>
+                <form action="submit" onSubmit={handleSubmit}>
+                    <input onChange={handleChange} value={name} type="text" required name="" id="userName" placeholder="Entrez votre prénom..."/>
+                    <button onClick={handleClick}>Accédeez à votre espace</button>
+                </form>
+                
+            </div>
+        </>
+    )
+
 }
-
 export default App
