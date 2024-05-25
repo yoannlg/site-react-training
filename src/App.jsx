@@ -1,4 +1,5 @@
 import { useState } from "react"
+import LoginPage from "./components/pages/LoginPage";
 
 function App(){
     //state
@@ -23,6 +24,7 @@ function App(){
     //render
     return (
         <>
+        <LoginPage/>
             <div>
                 <h1>Bienvenue chez nous !</h1>
                 <p>Connectez-vous</p>
