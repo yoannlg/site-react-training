@@ -140,6 +140,7 @@ header,
 hgroup,
 menu,
 nav,
+input,
 output,
 ruby,
 section,
@@ -156,7 +157,11 @@ video {
   vertical-align: baseline;
 }
 
-/* article,
+input:focus-visible {
+  outline: 0;
+}
+
+article,
 aside,
 details,
 figcaption,
@@ -190,4 +195,4 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-} */
+}

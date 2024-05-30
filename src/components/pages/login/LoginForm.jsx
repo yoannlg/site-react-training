@@ -22,7 +22,7 @@ export default function LoginForm() {
   return (
     <LoginFormStyled action="submit" onSubmit={handleSubmit}>
       <h1>Bienvenue chez nous !</h1>
-      <br />
+      <hr />
       <h2>Connectez-vous</h2>
 
       <input
@@ -39,6 +39,41 @@ export default function LoginForm() {
 
 const LoginFormStyled = styled.form`
   background: green;
+  color: white;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 464px;
+  height: 438px;
+  font-family: "Amatic SC", cursive;
+
+  h1 {
+    font-size: 48px;
+    font-weight: 700;
+  }
+  h2 {
+    font-weight: 700;
+    font-size: 36px;
+  }
+  hr {
+    width: 400px;
+    border: 1.5px solid #ff9f1b;
+  }
+  input {
+    width: 400px;
+    height: 55px;
+    margin: 18px;
+    padding: 18px, 24px, 18px, 24px;
+    border-radius: 5px;
+  }
+
+  button {
+    width: 400px;
+    height: 55px;
+    padding: 18px, 24px, 18px, 24px;
+    border-radius: 5px;
+    border: none;
+    background: #ff9f1b;
+  }
 `;
