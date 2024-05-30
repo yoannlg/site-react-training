@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { BsPersonCircle } from "react-icons/bs";
 import styled from "styled-components";
 
 export default function LoginForm() {
@@ -25,13 +26,16 @@ export default function LoginForm() {
       <hr />
       <h2>Connectez-vous</h2>
 
-      <input
-        onChange={handleChange}
-        value={inputValue}
-        type="text"
-        required
-        placeholder="Entrez votre prénom"
-      />
+      <div className="input-container">
+        <BsPersonCircle className="icon" />
+        <input
+          onChange={handleChange}
+          value={inputValue}
+          type="text"
+          required
+          placeholder="Entrez votre prénom"
+        />
+      </div>
       <button>Accéder à mon espace</button>
     </LoginFormStyled>
   );
@@ -39,11 +43,11 @@ export default function LoginForm() {
 
 const LoginFormStyled = styled.form`
   background: green;
-  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 15px auto;
   width: 464px;
   height: 438px;
   font-family: "Amatic SC", cursive;
@@ -51,27 +55,45 @@ const LoginFormStyled = styled.form`
   h1 {
     font-size: 48px;
     font-weight: 700;
-  }
-  h2 {
-    font-weight: 700;
-    font-size: 36px;
+    color: white;
   }
   hr {
     width: 400px;
     border: 1.5px solid #ff9f1b;
   }
-  input {
-    width: 400px;
-    height: 55px;
-    margin: 18px;
-    padding: 18px, 24px, 18px, 24px;
+  h2 {
+    font-weight: 700;
+    font-size: 36px;
+    color: white;
+  }
+  .input-container {
+    background-color: #fff;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 18px 24px;
+    margin: 18px 0;
+    .icon {
+      font-size: 15px;
+      margin-right: 8px;
+    }
+
+    input {
+      border: none;
+      font-size: 15px;
+      color: black;
+    }
+    &::placeholder {
+      background-color: #fff;
+      color: lightgray;
+    }
   }
 
   button {
     width: 400px;
     height: 55px;
     padding: 18px, 24px, 18px, 24px;
+    margin: 10px;
     border-radius: 5px;
     border: none;
     background: #ff9f1b;
