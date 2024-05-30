@@ -155,8 +155,8 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
-/*
-article,
+
+/* article,
 aside,
 details,
 figcaption,
@@ -190,5 +190,4 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
- */
+} */
