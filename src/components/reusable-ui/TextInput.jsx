@@ -29,6 +29,11 @@ const TextInputStyled = styled.div`
     font-weight: 400;
     border: none;
     color: black;
+
+    &:hover {
+      border: 2px solid #ff9f1b;
+      border-radius: 5px;
+    }
   }
   &::placeholder {
     background-color: #fff;
