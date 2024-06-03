@@ -6,6 +6,7 @@ import { IoChevronForward } from "react-icons/io5";
 import styled from "styled-components";
 import TextInput from "../../reusable-ui/TextInput";
 import PrimaryButtonStyled from "../../reusable-ui/PrimaryButton";
+import { theme } from "../../../theme";
 
 export default function LoginForm() {
   //state
@@ -48,7 +49,7 @@ export default function LoginForm() {
 
 const LoginFormStyled = styled.form`
   text-align: center;
-  max-width: 500;
+  max-width: 500px;
   min-width: 400px;
   margin: 0px auto;
   padding: 2.5rem 2rem;
@@ -56,25 +57,25 @@ const LoginFormStyled = styled.form`
 
   h1 {
     margin-top: 40px;
-    font-size: 48px;
-    font-weight: 700;
-    color: white;
+    font-size: ${theme.fonts.size.P5};
+    font-weight: ${theme.fonts.weights.bold};
+    color: ${theme.colors.white};
   }
   hr {
     margin: 40px 0;
-    border: 1.5px solid #ff9f1b;
+    border: 1.5px solid ${theme.colors.primary};
   }
   h2 {
-    color: white;
+    color: ${theme.colors.white};
     margin: 20px 10px 10px;
-    font-size: 36px;
-    font-weight: 700;
+    font-size: ${theme.fonts.size.P4};
+    font-weight: ${theme.fonts.weights.bold};
   }
   .icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 15px;
+    font-size: ${theme.fonts.size.P0};
     margin-left: 10px;
   }
 `;
