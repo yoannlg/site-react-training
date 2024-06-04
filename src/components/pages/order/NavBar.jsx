@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import Logo from "../../reusable-ui/Logo";
+import { Link } from "react-router-dom";
 
-export default function NavBar() {
+export default function NavBar({ userName }) {
   //state
 
   //Comportement
@@ -9,12 +10,16 @@ export default function NavBar() {
   //render
   return (
     <NavBarStyled>
-      <Logo />
-      <div>
-        <p>Hey, bob</p>
-      </div>
+      Navbar
+      <h1>Bonour {userName}</h1>
+      <Link to={"/"}>
+        <button>Déconnexion</button>
+      </Link>
     </NavBarStyled>
   );
 }
 
-const NavBarStyled = styled.div``;
+const NavBarStyled = styled.nav`
+  background: blue;
+  height: 10vh;
+`;
