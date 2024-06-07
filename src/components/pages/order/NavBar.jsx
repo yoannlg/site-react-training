@@ -9,12 +9,15 @@ export default function NavBar({ userName }) {
 
   //render
   return (
-    <NavBarStyled>
-      Navbar
-      <h1>Bonour {userName}</h1>
-      <Link to={"/"}>
-        <button>Déconnexion</button>
-      </Link>
+    <NavBarStyled className="navbar">
+      <div className="left-side">Left</div>
+      <div className="right-side">
+        Right
+        <h1>Bonjour {userName}</h1>
+        <Link to={"/"}>
+          <button>Déconnexion</button>
+        </Link>
+      </div>
     </NavBarStyled>
   );
 }
@@ -22,4 +25,14 @@ export default function NavBar({ userName }) {
 const NavBarStyled = styled.nav`
   background: blue;
   height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  //align-items: center;
+
+  .left-side {
+    background: pink;
+  }
+  .right-side {
+    background: purple;
+  }
 `;
