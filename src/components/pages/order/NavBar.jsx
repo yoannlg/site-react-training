@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Logo from "../../reusable-ui/Logo";
 import NavBarRightSide from "./NavBarRightSide";
 import { theme } from "../../../theme";
+import { refreshPage } from "../../../utils/windows";
 
 export default function NavBar({ userName }) {
   //state
@@ -11,7 +12,7 @@ export default function NavBar({ userName }) {
   //render
   return (
     <NavBarStyled className="navbar">
-      <Logo />
+      <Logo className="logo-order-page" onClick={refreshPage} />
       <NavBarRightSide userName={userName} />
     </NavBarStyled>
   );
@@ -25,5 +26,8 @@ const NavBarStyled = styled.nav`
   padding: 0 20px;
   border-top-left-radius: ${theme.borderRadius.extraRound};
   border-top-right-radius: ${theme.borderRadius.extraRound};
-  //align-items: center;
+
+  .logo-order-page {
+    cursor: pointer;
+  }
 `;
