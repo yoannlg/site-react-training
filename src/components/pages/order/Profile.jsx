@@ -33,7 +33,7 @@ const ProfileStyled = styled.div`
     text-align: right;
     margin-right: 10px;
     p {
-      margin: 0;
+      margin: 4px 0;
       color: ${theme.colors.greyBlue};
       b {
         color: ${theme.colors.primary};
@@ -59,7 +59,6 @@ const ProfileStyled = styled.div`
   }
 
   .picture {
-    /* border: 1px solid red; */
     height: auto;
     display: flex;
     height: 100%;

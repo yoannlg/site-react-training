@@ -6,12 +6,6 @@ export default function NavBarRightSide({ userName }) {
     <NavBarRightSideStyled>
       {/*       <div className="admin-button">ADMIN BUTTON</div>
        */}
-      {/* <div className="profile">
-        <p>Bonjour {userName}</p>
-        <Link to={"/"}>
-          <button>Déconnexion</button>
-        </Link>
-      </div> */}
       <Profile userName={userName} />
       <div className="picture"></div>
     </NavBarRightSideStyled>
