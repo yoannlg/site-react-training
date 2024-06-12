@@ -13,7 +13,6 @@ export default function Logo({ className, onClick }) {
 const LogoStyled = styled.div`
   display: flex;
   align-items: center;
-  transform: scale(2 2);
 
   h1 {
     display: inline;
