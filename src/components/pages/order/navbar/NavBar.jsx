@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import Logo from "../../reusable-ui/Logo";
+import Logo from "../../../reusable-ui/Logo";
 import NavBarRightSide from "./NavBarRightSide";
-import { theme } from "../../../theme";
-import { refreshPage } from "../../../utils/windows";
+import { theme } from "../../../../theme";
+import { refreshPage } from "../../../../utils/windows";
 
 export default function NavBar({ userName }) {
   //state

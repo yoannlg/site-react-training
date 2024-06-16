@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { theme } from "../../../theme";
-import Card from "../../reusable-ui/Card";
+import { theme } from "../../../../theme";
+import Card from "../../../reusable-ui/Card";
 import { useState } from "react";
-import { fakeMenu1, fakeMenu2 } from "../../../fakeData/fakeMenu";
+import { fakeMenu1, fakeMenu2 } from "../../../../fakeData/fakeMenu";
 
 export default function Main() {
   //state
@@ -14,10 +14,11 @@ export default function Main() {
   //render
   return (
     <MainStyled className="main">
-      <div className="basket">BASKET</div>
+      {/* <div className="basket">BASKET</div> */}{" "}
+      {/* AJOUT DE LA PARTIE PANNIER EN ANTICIPATION D4UN FUTURE TICKET */}
       <div className="menu">
-        {fakeMenu2.map(() => (
-          <Card />
+        {fakeMenu2.map((menu) => (
+          <Card key={menu.id} />
         ))}
         {/*<Card name="UN" className="green" />
         <Card name="DEUX" className="green" />
@@ -50,8 +51,9 @@ const MainStyled = styled.div`
   }
   .menu {
     flex: 1;
+    display: grid;
     border: 2px solid red;
-    //grid-template-columns: 350px 350px 350px 350px;
+    grid-template-columns: 350px 350px 350px 350px;
     //grid-template-columns: repeat(4, 350px);
     grid-template-columns: repeat(4, 1fr);
     gap: 10px 0px;
