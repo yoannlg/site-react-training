@@ -10,7 +10,7 @@ import {
 
 export default function Menu() {
   //state
-  const [menu, setMenu] = useState(fakeMenu1);
+  const [menu, setMenu] = useState(fakeMenu2);
 
   //comportement
   const priceFinalFormat = (price) => {

@@ -17,7 +17,7 @@ export const fakeMenu1 = [
     isAvailable: true,
     isAdvertised: false,
   },
-]
+];
 
 export const fakeMenu2 = [
   {
@@ -104,10 +104,10 @@ export const fakeMenu2 = [
   {
     id: 10,
     imageSource: "/images/ice-cream.png",
-    title: "Glaces artisanales",
+    title: "Glaces artisanales super bonne à manger",
     price: 4.678,
     quantity: 0,
     isAvailable: true,
     isAdvertised: false,
   },
-]
+];

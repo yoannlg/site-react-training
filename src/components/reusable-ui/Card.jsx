@@ -47,6 +47,8 @@ const CardStyled = styled.div`
       font-family: "Amatic SC";
       font-size: ${theme.fonts.size.P4};
       font-weight: ${theme.fonts.weights.bold};
+      white-space: nowrap;
+      overflow: hidden;
     }
   }
   .detail {
