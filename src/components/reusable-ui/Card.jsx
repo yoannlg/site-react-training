@@ -8,7 +8,7 @@ export default function Card({ title, img, price, ...others }) {
       <div className="info">
         <h1 className="nom">{title}</h1>
         <div className="detail">
-          <p>{price} €</p>
+          <p>{price}</p>
           <button>Ajouter</button>
         </div>
       </div>
