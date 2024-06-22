@@ -68,6 +68,18 @@ const CardStyled = styled.div`
       height: 38px;
       border-radius: 5px;
       color: ${theme.colors.white};
+      border: 1px solid ${theme.colors.primary};
+      transition: 300ms;
+      cursor: pointer;
+
+      &:hover {
+        background: ${theme.colors.white};
+        color: ${theme.colors.primary};
+      }
+      &:active {
+        background: ${theme.colors.primary};
+        color: ${theme.colors.white};
+      }
     }
   }
 `;
