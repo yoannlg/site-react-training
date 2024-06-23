@@ -4,7 +4,7 @@ import { theme } from "../../theme";
 export default function Logo({ className, onClick }) {
   return (
     <LogoStyled className={className} onClick={onClick}>
-      <h1>CRAZEE</h1>
+      <h1>Lovely</h1>
       <img src="/images/logo-orange.png" alt="logo-crazee-burger" />
       <h1>BURGER</h1>
     </LogoStyled>
@@ -13,7 +13,6 @@ export default function Logo({ className, onClick }) {
 const LogoStyled = styled.div`
   display: flex;
   align-items: center;
-  transform: scale(2 2);
 
   h1 {
     display: inline;
