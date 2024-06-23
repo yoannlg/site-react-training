@@ -1,12 +1,9 @@
 import { useState } from "react";
-import { fakeMenu1, fakeMenu2 } from "../../../../fakeData/fakeMenu";
+import { fakeMenu2 } from "../../../../fakeData/fakeMenu";
 import Card from "../../../reusable-ui/Card";
 import styled from "styled-components";
 import { theme } from "../../../../theme";
-import {
-  formatPrice,
-  replaceFrenchCommaWithDot,
-} from "../../../../utils/maths";
+import { formatPrice } from "../../../../utils/maths";
 
 export default function Menu() {
   //state
@@ -14,12 +11,12 @@ export default function Menu() {
 
   return (
     <MenuStyled>
-      {menu.map((menu) => (
+      {menu.map(({ id, title, price, imageSource }) => (
         <Card
-          key={menu.id}
-          title={menu.title}
-          price={formatPrice(menu.price)}
-          img={menu.imageSource}
+          key={id}
+          title={title}
+          leftDetail={formatPrice(price)}
+          img={imageSource}
           /*IDENTIQUE AVEC LE DESTRUCTURING
           mais ils faut que les clé de l'objet soit les même que les props
           EX: j'ai une props img à qui je donne la valeur de menu.imageSource

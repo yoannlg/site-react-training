@@ -2,15 +2,14 @@ import styled from "styled-components";
 import { theme } from "../../theme";
 import PrimaryButton from "./PrimaryButton";
 
-export default function Card({ title, img, price, ...others }) {
+export default function Card({ title, img, leftDetail, ...others }) {
   return (
     <CardStyled className={others.altclassName}>
       <img src={img} alt={title} />
       <div className="info">
         <h1 className="nom">{title}</h1>
         <div className="detail">
-          <p>{price}</p>
-          {/* <button>Ajouter</button> */}
+          <p>{leftDetail}</p>
           <PrimaryButton label={"Ajouter"} />
         </div>
       </div>
@@ -21,10 +20,6 @@ const CardStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /*  width: 240px;
-  height: 330px;
-  margin-top: 50px;
-  padding-top: 50px; */
   width: 200px; //240px - 20px de padding droite et 20px de padding gauche
   height: 270px; //330px - 50px de padding-top et - 10px de padding-bottom
   padding: 50px 20px 10px;
@@ -34,7 +29,6 @@ const CardStyled = styled.div`
   img {
     width: 100%;
     height: 145px;
-    /* margin: 0 20px; */
     object-fit: contain;
   }
 
@@ -44,7 +38,6 @@ const CardStyled = styled.div`
   .info {
     width: 200px;
     height: 110px;
-    //padding: 0 5px 5px 5px;
     h1 {
       font-family: "Amatic SC";
       font-size: ${theme.fonts.size.P4};
