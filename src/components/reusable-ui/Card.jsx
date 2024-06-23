@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { theme } from "../../theme";
+import PrimaryButton from "./PrimaryButton";
 
 export default function Card({ title, img, price, ...others }) {
   return (
@@ -9,7 +10,8 @@ export default function Card({ title, img, price, ...others }) {
         <h1 className="nom">{title}</h1>
         <div className="detail">
           <p>{price}</p>
-          <button>Ajouter</button>
+          {/* <button>Ajouter</button> */}
+          <PrimaryButton label={"Ajouter"} />
         </div>
       </div>
     </CardStyled>
@@ -65,23 +67,10 @@ const CardStyled = styled.div`
     button {
       font-size: ${theme.fonts.size.XS};
       font-weight: ${theme.fonts.weights.bold};
-      background-color: ${theme.colors.primary};
       width: 95px;
       height: 38px;
       border-radius: 5px;
-      color: ${theme.colors.white};
-      border: 1px solid ${theme.colors.primary};
-      transition: 300ms;
       cursor: pointer;
-
-      &:hover {
-        background: ${theme.colors.white};
-        color: ${theme.colors.primary};
-      }
-      &:active {
-        background: ${theme.colors.primary};
-        color: ${theme.colors.white};
-      }
     }
   }
 `;
