@@ -8,7 +8,9 @@ import { useState } from "react";
 export default function NavBarRightSide({ userName }) {
   const [isChecked, setIsChecked] = useState(false);
   const notify = () =>
-    toast.info("🦄 Wow so easy!", {
+    toast.info("Mode admin activé", {
+      // icon: <FaUserSecret size={30} />,
+      theme: "dark",
       position: "bottom-right",
       autoClose: 5000,
       hideProgressBar: false,
@@ -16,11 +18,15 @@ export default function NavBarRightSide({ userName }) {
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
-      theme: "dark",
     });
 
   const onToggle = () => {
-    isChecked ? setIsChecked(false) : setIsChecked(true);
+    if (isChecked) {
+      setIsChecked(false);
+    } else {
+      setIsChecked(true);
+      notify();
+    }
   };
   return (
     <NavBarRightSideStyled>
