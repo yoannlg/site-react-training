@@ -12,18 +12,13 @@ export default function Menu() {
   //state
   const [menu, setMenu] = useState(fakeMenu2);
 
-  //comportement
-  const priceFinalFormat = (price) => {
-    let finalPrice = replaceFrenchCommaWithDot(price);
-    return (finalPrice = formatPrice(finalPrice));
-  };
   return (
     <MenuStyled>
       {menu.map((menu) => (
         <Card
           key={menu.id}
           title={menu.title}
-          price={priceFinalFormat(menu.price)}
+          price={formatPrice(menu.price)}
           img={menu.imageSource}
           /*IDENTIQUE AVEC LE DESTRUCTURING
           mais ils faut que les clé de l'objet soit les même que les props

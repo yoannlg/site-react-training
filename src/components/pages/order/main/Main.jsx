@@ -25,7 +25,9 @@ const MainStyled = styled.div`
   border-bottom-right-radius: ${theme.borderRadius.extraRound};
 
   overflow-y: scroll;
-
+  &::-webkit-scrollbar {
+    display: none;
+  }
   .basket {
     border: 1px solid purple;
     background: purple;
