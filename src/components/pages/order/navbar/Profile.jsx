@@ -47,6 +47,7 @@ const ProfileStyled = styled.div`
           color: ${theme.colors.greyDark};
         }
         small {
+          font-family: "Open Sans";
           font-size: ${theme.fonts.size.XXS};
           color: ${theme.colors.greyBlue};
           font-weight: ${theme.fonts.weights.medium};

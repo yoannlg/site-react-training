@@ -33,11 +33,11 @@ const PrimaryButtonStyled = styled.button`
     border: 1px solid #ff9f1b;
     transition: all 200ms ease-out;
   }
-
+  //WIP trouver le problème de priorité des règles css
   &:active {
-    color: white;
-    background-color: #ff9f1b;
-    border: 1px solid #ff9f1b;
+    color: white !important;
+    background-color: #ff9f1b !important;
+    border: 1px solid #ff9f1b !important;
   }
 
   &:disabled {
