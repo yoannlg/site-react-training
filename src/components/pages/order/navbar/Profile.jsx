@@ -28,6 +28,7 @@ const ProfileStyled = styled.div`
   align-items: center;
   justify-content: space-between;
   min-width: 100px;
+  padding-left: 50px;
 
   .info {
     text-align: right;
@@ -47,6 +48,7 @@ const ProfileStyled = styled.div`
           color: ${theme.colors.greyDark};
         }
         small {
+          font-family: "Open Sans";
           font-size: ${theme.fonts.size.XXS};
           color: ${theme.colors.greyBlue};
           font-weight: ${theme.fonts.weights.medium};

@@ -64,11 +64,12 @@ header,
 hgroup,
 menu,
 nav,
+input,
 section,
 summary,
 time,
 mark,
-button,
+/* button, */
 audio,
 video {
   margin: 0;

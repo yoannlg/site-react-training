@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { theme } from "../../theme";
 
-export default function PrimaryButton({ label, Icon }) {
+export default function PrimaryButton({ label, Icon, className }) {
   return (
-    <PrimaryButtonStyled>
+    <PrimaryButtonStyled className={className}>
       <span>{label}</span>
       {Icon && Icon}
     </PrimaryButtonStyled>
@@ -27,17 +28,17 @@ const PrimaryButtonStyled = styled.button`
   background-color: #ff9f1b;
   border: 1px solid #ff9f1b;
 
-  &:hover:not(:disabled) {
+  //TODO WIP trouver le problème de priorité des règles css
+  &:hover {
     background-color: #fff;
     color: #ff9f1b;
     border: 1px solid #ff9f1b;
     transition: all 200ms ease-out;
   }
-
   &:active {
-    color: white;
-    background-color: #ff9f1b;
-    border: 1px solid #ff9f1b;
+    color: ${theme.colors.white};
+    background-color: ${theme.colors.primary};
+    border: 1px solid ${theme.colors.primary};
   }
 
   &:disabled {
