@@ -54,7 +54,7 @@ const CardStyled = styled.div`
 
     p {
       color: ${theme.colors.primary};
-      font-size: ${theme.fonts.size.P0};
+      font-size: ${theme.fonts.size.SM};
       font-weight: ${theme.fonts.weights.regular};
     }
     button {

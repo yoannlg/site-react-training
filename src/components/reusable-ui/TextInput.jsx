@@ -18,7 +18,7 @@ const TextInputStyled = styled.div`
   padding: 18px 24px;
   margin: 18px 0;
   .icon {
-    font-size: ${theme.fonts.size.P0};
+    font-size: ${theme.fonts.size.SM};
     margin-right: 8px;
     color: ${theme.colors.greySemiDark};
   }
@@ -26,7 +26,7 @@ const TextInputStyled = styled.div`
   input {
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
-    font-size: ${theme.fonts.size.P0};
+    font-size: ${theme.fonts.size.SM};
     font-weight: ${theme.fonts.weights.regular};
     border: none;
     color: ${theme.colors.dark};
