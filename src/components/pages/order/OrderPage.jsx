@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
-import Main from "./main/Main";
+import Main from "./menu/MenuContainer";
 import { theme } from "../../../theme";
 import NavBar from "./navbar/NavBar";
 
@@ -24,7 +24,8 @@ const OrderPageStyled = styled.div`
   align-items: center;
 
   .container {
-    background: red;
+    background: green;
+    position: relative;
     height: 95vh;
     width: 1400px;
     display: flex;
