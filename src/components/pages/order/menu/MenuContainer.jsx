@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { theme } from "../../../../theme";
 import Menu from "./Menu";
+import Admin from "./Admin/Admin";
 
 export default function MenuContainer() {
   //state
@@ -14,10 +15,11 @@ export default function MenuContainer() {
       {/* AJOUT DE LA PARTIE PANNIER EN ANTICIPATION D4UN FUTURE TICKET */}
       <div className="admin-wrapper">
         <Menu />
-        <div className="admin">
+        <Admin />
+        {/* <div className="admin">
           <div className="admin-tabs"></div>
           <p className="admin-title">Titre dynamique</p>
-        </div>
+        </div> */}
       </div>
     </MenuContainerStyled>
   );
@@ -45,10 +47,6 @@ const MenuContainerStyled = styled.div`
   .admin-wrapper {
     overflow-y: hidden;
     display: grid;
-  }
-  .admin {
-    background: red;
-    height: 250px;
   }
 
   /* .admin {
