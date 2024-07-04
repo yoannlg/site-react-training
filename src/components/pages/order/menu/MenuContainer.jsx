@@ -9,21 +9,28 @@ export default function MenuContainer() {
 
   //render
   return (
-    <MainStyled className="main">
+    <MenuContainerStyled>
       {/* <div className="basket">BASKET</div> */}
       {/* AJOUT DE LA PARTIE PANNIER EN ANTICIPATION D4UN FUTURE TICKET */}
-      <Menu />
-      <div className="admin">
-        <p>Titre dynamique</p>
+      <div className="admin-wrapper">
+        <Menu />
+        <div className="admin">
+          <div className="admin-tabs"></div>
+          <p className="admin-title">Titre dynamique</p>
+        </div>
       </div>
-    </MainStyled>
+    </MenuContainerStyled>
   );
 }
 
-const MainStyled = styled.div`
+const MenuContainerStyled = styled.div`
+  //border: 3px solid green;
+  background: white;
   display: grid;
   grid-template-columns: 1fr;
   flex: 1;
+
+  box-shadow: 0px 8px 20px 8px rgba(0, 0, 0, 0.2) inset;
   border-bottom-left-radius: ${theme.borderRadius.extraRound};
   border-bottom-right-radius: ${theme.borderRadius.extraRound};
 
@@ -31,12 +38,20 @@ const MainStyled = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
-  .basket {
+  /* .basket {
     border: 1px solid purple;
     background: purple;
-    margin: 10px;
+  } */
+  .admin-wrapper {
+    overflow-y: hidden;
+    display: grid;
   }
   .admin {
+    background: red;
+    height: 250px;
+  }
+
+  /* .admin {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -44,11 +59,31 @@ const MainStyled = styled.div`
     z-index: 5;
     border-bottom-left-radius: ${theme.borderRadius.extraRound};
     border-bottom-right-radius: ${theme.borderRadius.extraRound};
-    background: red;
+    background: lightgrey;
+    border: 2px solid red;
+    //padding-left: 70px;
 
-    p {
+    .admin-title {
       margin-top: 18px;
       margin-left: 21px;
     }
-  }
+    .admin-tabs {
+      display: flex;
+      position: absolute;
+      top: -44px;
+      justify-content: start;
+      align-items: center;
+      margin-left: 70px;
+      height: 44px;
+      border: 1px solid green;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      margin: 1px;
+      background: wheat;
+    }
+  } */
 `;

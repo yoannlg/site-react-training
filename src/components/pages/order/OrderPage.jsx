@@ -24,7 +24,6 @@ const OrderPageStyled = styled.div`
   align-items: center;
 
   .container {
-    background: green;
     position: relative;
     height: 95vh;
     width: 1400px;
