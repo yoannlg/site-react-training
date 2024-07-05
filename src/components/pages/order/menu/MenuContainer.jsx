@@ -2,10 +2,12 @@ import styled from "styled-components";
 import { theme } from "../../../../theme";
 import Menu from "./Menu";
 import Admin from "./Admin/Admin";
+import { useContext } from "react";
+import { OrderContext } from "../../../../context/OrderContext";
 
 export default function MenuContainer() {
   //state
-
+  const { isAdmin } = useContext(OrderContext);
   //comportement
 
   //render
@@ -15,7 +17,7 @@ export default function MenuContainer() {
       {/* AJOUT DE LA PARTIE PANNIER EN ANTICIPATION D4UN FUTURE TICKET */}
       <div className="admin-wrapper">
         <Menu />
-        <Admin />
+        {isAdmin && <Admin />}
         {/* <div className="admin">
           <div className="admin-tabs"></div>
           <p className="admin-title">Titre dynamique</p>

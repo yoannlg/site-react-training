@@ -4,7 +4,7 @@ import NavBarRightSide from "./NavBarRightSide";
 import { theme } from "../../../../theme";
 import { refreshPage } from "../../../../utils/windows";
 
-export default function NavBar({ userName }) {
+export default function NavBar() {
   //state
 
   //Comportement
@@ -13,7 +13,7 @@ export default function NavBar({ userName }) {
   return (
     <NavBarStyled className="navbar">
       <Logo className="logo-order-page" onClick={refreshPage} />
-      <NavBarRightSide userName={userName} />
+      <NavBarRightSide />
     </NavBarStyled>
   );
 }
