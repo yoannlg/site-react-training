@@ -18,10 +18,6 @@ export default function MenuContainer() {
       <div className="admin-wrapper">
         <Menu />
         {isAdmin && <Admin />}
-        {/* <div className="admin">
-          <div className="admin-tabs"></div>
-          <p className="admin-title">Titre dynamique</p>
-        </div> */}
       </div>
     </MenuContainerStyled>
   );
