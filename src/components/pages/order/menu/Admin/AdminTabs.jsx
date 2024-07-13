@@ -21,15 +21,16 @@ export default function AdminTabs() {
     setIsCollapsed(!isCollapsed);
   };
 
-  const selectAddTab = () => {
+  const selectTab = (tabSelected) => {
+    if (tabSelected === "add") {
+      setIsAddTabActive(true);
+      setIsEditTabActive(false);
+    }
+    if (tabSelected === "edit") {
+      setIsEditTabActive(true);
+      setIsAddTabActive(false);
+    }
     setIsCollapsed(false);
-    setIsAddTabActive(true);
-    setIsEditTabActive(false);
-  };
-  const selectEditTab = () => {
-    setIsCollapsed(false);
-    setIsEditTabActive(true);
-    setIsAddTabActive(false);
   };
 
   return (
@@ -40,13 +41,17 @@ export default function AdminTabs() {
         className={isCollapsed ? "is-active" : ""}
       />
       <Tab
-        onClick={selectAddTab}
+        onClick={() => {
+          selectTab("add");
+        }}
         icon={<AiOutlinePlus />}
         label="Ajouter un produit"
         className={isAddTabActive ? "is-active" : ""}
       />
       <Tab
-        onClick={selectEditTab}
+        onClick={() => {
+          selectTab("edit");
+        }}
         icon={<MdModeEditOutline />}
         label="Modifier un produit"
         className={isEditTabActive ? "is-active" : ""}
