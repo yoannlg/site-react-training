@@ -7,10 +7,19 @@ import { useState } from "react";
 
 export default function OrderPage() {
   const [isAdmin, setIsAdmin] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isAddTabActive, setIsAddTabActive] = useState(true);
+  const [isEditTabActive, setIsEditTabActive] = useState(false);
 
   const valueOrderContext = {
     isAdmin,
     setIsAdmin,
+    isCollapsed,
+    setIsCollapsed,
+    isAddTabActive,
+    setIsAddTabActive,
+    isEditTabActive,
+    setIsEditTabActive,
   };
 
   return (
