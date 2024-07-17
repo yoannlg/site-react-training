@@ -9,4 +9,6 @@ export const OrderContext = createContext({
   setIsAddTabActive: () => {},
   isEditTabActive: false,
   setIsEditTabActive: () => {},
+  currentTabSelected: "add",
+  setCurrentTabSelected: () => {},
 });

@@ -4,12 +4,14 @@ import AdminPanel from "./AdminPanel";
 import { theme } from "../../../../../theme";
 import { useContext } from "react";
 import { OrderContext } from "../../../../../context/OrderContext";
+import AdminTabsCORRECTION from "./AdminTabsCORRECTION";
 
 export default function Admin() {
   const { isCollapsed } = useContext(OrderContext);
   return (
     <AdminStyled>
-      <AdminTabs />
+      {/* <AdminTabs /> */}
+      <AdminTabsCORRECTION />
       {!isCollapsed && <AdminPanel />}
       <div className="admin-tabs"></div>
     </AdminStyled>

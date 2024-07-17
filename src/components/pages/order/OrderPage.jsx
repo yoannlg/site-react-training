@@ -11,6 +11,8 @@ export default function OrderPage() {
   const [isAddTabActive, setIsAddTabActive] = useState(true);
   const [isEditTabActive, setIsEditTabActive] = useState(false);
 
+  const [currentTabSelected, setCurrentTabSelected] = useState("add");
+
   const valueOrderContext = {
     isAdmin,
     setIsAdmin,
@@ -20,6 +22,8 @@ export default function OrderPage() {
     setIsAddTabActive,
     isEditTabActive,
     setIsEditTabActive,
+    currentTabSelected,
+    setCurrentTabSelected,
   };
 
   return (
