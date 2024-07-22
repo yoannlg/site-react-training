@@ -5,14 +5,16 @@ import { theme } from "../../../../../theme";
 import { useContext } from "react";
 import { OrderContext } from "../../../../../context/OrderContext";
 import AdminTabsCORRECTION from "./AdminTabsCORRECTION";
+import AdminPanelCORRECTION from "./AdminPanelCORRECTION";
 
 export default function Admin() {
   const { isCollapsed } = useContext(OrderContext);
   return (
     <AdminStyled>
-      {/* <AdminTabs /> */}
-      <AdminTabsCORRECTION />
+      <AdminTabs />
       {!isCollapsed && <AdminPanel />}
+      {/*  <AdminTabsCORRECTION />
+      {!isCollapsed && <AdminPanelCORRECTION />} */}
       <div className="admin-tabs"></div>
     </AdminStyled>
   );

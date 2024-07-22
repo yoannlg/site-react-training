@@ -20,8 +20,8 @@ export default function AdminTabsCORRECTION() {
   };
 
   const selectTab = (tabSelected) => {
-    setIsCollapsed(false);
-    setCurrentTabSelected(tabSelected);
+    setIsCollapsed(false); //Ouvre le panel dans tout les cas
+    setCurrentTabSelected(tabSelected); //Actualise le tab selectionné
   };
   const tabs = getTabsConfig(currentTabSelected);
   return (
@@ -32,14 +32,14 @@ export default function AdminTabsCORRECTION() {
         className={isCollapsed ? "is-active" : ""}
       />
 
-      {tabs.map(({ icon, label, className, index }) => {
+      {tabs.map(({ icon, label, index }) => {
         return (
           <Tab
             key={self.crypto.randomUUID()}
             onClick={() => selectTab(index)}
             icon={icon}
             label={label}
-            className={className}
+            className={currentTabSelected === index ? "is-active" : ""}
           />
         );
       })}

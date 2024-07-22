@@ -1,7 +1,7 @@
 import { AiOutlinePlus } from "react-icons/ai";
 import { MdModeEditOutline } from "react-icons/md";
 
-export const getTabsConfig = (currentTabSelected) => [
+export const getTabsConfig = [
   /* {
     index: "chevronUpDown",
     onClick: handleClickOnCollapsedTab,
@@ -13,12 +13,14 @@ export const getTabsConfig = (currentTabSelected) => [
     index: "add",
     icon: <AiOutlinePlus />,
     label: "Ajouter un produit",
-    className: currentTabSelected === "add" ? "is-active" : "",
+    /*     className: currentTabSelected === "add" ? "is-active" : "",//A desactiver avec les CORRECTION
+     */
   },
   {
     index: "edit",
     icon: <MdModeEditOutline />,
     label: "Modifier un produit",
-    className: currentTabSelected === "edit" ? "is-active" : "",
+    /*     className: currentTabSelected === "edit" ? "is-active" : "",//A desactiver avec les CORRECTION
+     */
   },
 ];
