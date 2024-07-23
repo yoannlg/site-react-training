@@ -24,7 +24,7 @@ const CardStyled = styled.div`
   height: 270px; //330px - 50px de padding-top et - 10px de padding-bottom
   padding: 50px 20px 10px;
   border-radius: ${theme.borderRadius.extraRound};
-  box-shadow: -8px 8px 20px 0px rgb(0 0 0 / 20%);
+  box-shadow: ${theme.shadows.medium};
 
   img {
     width: 100%;
